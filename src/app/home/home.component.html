@@ -1,1 +1,10 @@
-<p>home works!</p>
+<p>{{ data }} </p>  <!--Interpolation-->
+<p [textContent]="data1"></p>   <!-- Property Binding-->
+<button (click)="clickIncrese()">Event Binding</button><h6>{{ count }}</h6> <!-- Event Binding-->
+<input type="text" [(ngModel)]="username">  <!-- Two way Binding-->
+<h5>{{username }}</h5>   
+<h5>{{uppercasepipe | uppercase }}</h5>  <!--Pipe-->
+<h5>{{data | reverse | uppercase }}</h5>   <!-- custom Pipe(reverse)-->
+<button (click)="clickDecrese()">Count Decrese</button>   
+<!-- <check-out [count]=count></check-out>                parent to child interaction using @input   -->
+<check-out [count]=count (stringModify)="stringModifyHandler($event)"></check-out>    <!--child to parent interaction using @Output-->   

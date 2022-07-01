@@ -1,1 +1,9 @@
-<p>check-out works!</p>
+<p>parent --> child interaction using  @input</p>
+current count is {{ count}} 
+<br>
+<p>child --> parent interaction using  @Output</p>
+<input type="text" [(ngModel)]="stringData"> 
+<button (click)="UpperCase()">Upper Case</button>  <br>
+<button (click)="LowerCase()">Lower Case</button>  
+current String is {{ stringData }} <br>
+Updated value is {{ str }} 

@@ -13,6 +13,8 @@ import { RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FormsModule } from '@angular/forms';
+import { CustomPipePipe } from './custom-pipe.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,10 +25,12 @@ import { NavbarComponent } from './navbar/navbar.component';
     OrderSuccessComponent,
     MyOrderComponent,
     AdminOrdersComponent,
-    NavbarComponent
+    NavbarComponent,
+    CustomPipePipe
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot([
       {
       path: '',component:HomeComponent
